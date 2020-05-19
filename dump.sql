@@ -1,0 +1,60 @@
+CREATE DATABASE teste;
+
+USE teste;
+
+CREATE TABLE IF NOT EXISTS solicitacoes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    solicitante VARCHAR(255) NOT NULL,
+    situacao VARCHAR(255),
+    aprovador VARCHAR(255),
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_ultima_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS usuarios(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_completo VARCHAR(255) NOT NULL,
+    login VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    perfil VARCHAR(255) NOT NULL,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_ultima_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO usuarios (nome_completo, login, senha, perfil) VALUES (
+	'André Hoffmann',
+    'andre',
+    '123',
+    'solicitante'
+);
+
+INSERT INTO usuarios (nome_completo, login, senha, perfil) VALUES (
+	'Camila Zanotto',
+    'camila',
+    '123',
+    'almoxarife'
+);
+
+INSERT INTO usuarios (nome_completo, login, senha, perfil) VALUES (
+	'Lauro Hoffmann',
+    'admin',
+    '123',
+    'admin'
+);
+
+INSERT INTO solicitacoes (descricao, preco, solicitante, situacao, aprovador) VALUES (
+	'Pilha AA',
+    12.99,
+    'Camila',
+    'Aprovado',
+    'João'
+);
+INSERT INTO solicitacoes (descricao, preco, solicitante, situacao, aprovador) VALUES (
+	'Pilha AAA',
+    5.50,
+    'André',
+    'Reprovado',
+    'Geferson'
+);
