@@ -1,4 +1,4 @@
-package com.apirest;
+package com.apirest.controllers;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.apirest.models.Solicitacao;
+import com.apirest.services.SolicitacaoService;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
