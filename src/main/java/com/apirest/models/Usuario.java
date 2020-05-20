@@ -70,5 +70,11 @@ public class Usuario {
 	public void setPerfil(String perfil) {
 		this.perfil = perfil;
 	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nomeCompleto=" + nomeCompleto + ", login=" + login + ", senha=" + senha
+				+ ", perfil=" + perfil + "]";
+	}
 		
 }

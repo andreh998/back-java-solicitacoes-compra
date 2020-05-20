@@ -31,5 +31,10 @@ public class LoginForm {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	@Override
+	public String toString() {
+		return "LoginForm [login=" + login + ", senha=" + senha + "]";
+	}
 	
 }
