@@ -1,4 +1,4 @@
-## front-solicitacoes-compra
+## back-solicitacoes-compra
 
 Back-end do sistema de solicitação de compra. Front-end disponível em: <br/>
 https://github.com/andreh998/front-solicitacoes-compra
