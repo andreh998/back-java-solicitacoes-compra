@@ -19,6 +19,7 @@ Com esta build não precisamos ter o tomcat instalado na máquina.
 
 Na pasta raiz do projeto execute o comando: <br/>
 `mvn clean package` <br/>
+
 Feito isso, será criada uma pasta chamada target na raiz, e dentro dela teremos um arquivo jar para executar o projeto. Neste caso o nome do arquivo é: <br/>
 `ControleSolicitacoesRest-0.0.1-SNAPSHOT.jar`
 
@@ -34,4 +35,6 @@ spring.datasource.url=**coloque_aqui_a_url_de_conexão** <br/>
 spring.datasource.username=**coloque_aqui_o_usuario** <br/>
 spring.datasource.password=**coloque_aqui_a_senha** <br/>
 
+## Banco de dados do back-end
 
+Um arquivo com os SQLs (dump.sql) para criação das tabelas e inserção dos usuários está na raiz do projeto.
