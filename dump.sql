@@ -6,9 +6,11 @@ CREATE TABLE IF NOT EXISTS solicitacoes(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     descricao VARCHAR(255) NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
+    quantidade INTEGER NOT NULL,
     solicitante VARCHAR(255) NOT NULL,
     situacao VARCHAR(255),
-    aprovador VARCHAR(255),
+    aprovador VARCHAR(255) DEFAULT NULL,
+    observacao TEXT DEFAULT NULL,
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_ultima_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -42,19 +44,4 @@ INSERT INTO usuarios (nome_completo, login, senha, perfil) VALUES (
     'admin',
     '123',
     'admin'
-);
-
-INSERT INTO solicitacoes (descricao, preco, solicitante, situacao, aprovador) VALUES (
-	'Pilha AA',
-    12.99,
-    'Camila',
-    'Aprovado',
-    'João'
-);
-INSERT INTO solicitacoes (descricao, preco, solicitante, situacao, aprovador) VALUES (
-	'Pilha AAA',
-    5.50,
-    'André',
-    'Reprovado',
-    'Geferson'
 );
